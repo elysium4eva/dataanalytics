@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 3 · Data Preparation · Data Analytics in Marketing</title>
+<meta name="description" content="Chapter 3 of Data Analytics in Marketing (Shenzhen University): The 60–80% of the work: grain and keys, joins that do not explode, the five cleaning steps, the three missingness mechanisms, panels, transformations and pipelines you can re-run.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/szu-logo.jpg">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/img/szu-logo.jpg" alt="Shenzhen University emblem">
+      <span>Data Analytics in Marketing</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#info">Course Info</a>
+      <a href="index.html#schedule">Schedule</a>
+      <a href="index.html#chapters">Chapters</a>
+      <a href="code.html">Code &amp; Data</a>
+      <a href="index.html#assessment">Assessment</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a class="cta" href="lecture-01.html">Chapter 1</a>
+    </div>
+  </div>
+</nav>
+
+<main class="doc">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">Course home</a> › <a href="index.html#chapters">Chapters</a> › Chapter 3</p>
+    <h1 class="doc-title">Chapter 3 — Data Preparation</h1>
+    <p class="doc-sub">Joining, cleaning, missing data and reproducible pipelines · Data Analytics in Marketing · Shenzhen University · 2026</p>
+
+    <div class="hero-actions no-print">
+      <a class="btn btn-primary" href="files/CH03-data-preparation.pdf">Download slides (English edition · 92 frames)</a>
+      <a class="btn btn-ghost" href="lecture-02.html">← Chapter 2 slides</a>
+      <a class="btn btn-ghost" href="lecture-04.html">Chapter 4 slides →</a>
+    </div>
+
+    <div class="grid grid-4" style="margin-top:22px">
+      <div class="card"><div class="k">Format</div><div class="v"><strong>92</strong> frames · 16:9</div></div>
+      <div class="card"><div class="k">Structure</div><div class="v">7 sections</div></div>
+      <div class="card"><div class="k">Toolchain</div><div class="v">XeLaTeX + Beamer (SZU theme)</div></div>
+      <div class="card"><div class="k">Language</div><div class="v">English</div></div>
+    </div>
+
+    <h3>What the chapter covers</h3>
+    <p>The 60–80% of the work: grain and keys, joins that do not explode, the five cleaning steps, the three missingness mechanisms, panels, transformations and pipelines you can re-run.</p>
+
+    <h3>Outline</h3>
+    <div class="table-wrap"><table>
+      <tbody>
+        <tr><td class="week">§1</td><td><strong>Quality and preparation at a glance</strong><br>Why preparation dominates, the five dimensions of quality, grain — what does one row mean — layering and data contracts, the five cleaning steps, five rules for reproducibility</td></tr>
+        <tr><td class="week">§2</td><td><strong>Combine and reshape</strong><br>Append and merge, join types and union, cardinality and why row counts explode, key normalisation, safe merges with validation, wide and long layouts, pivot tables, the reshaping toolbox</td></tr>
+        <tr><td class="week">§3</td><td><strong>Data cleaning</strong><br>Duplicates and irrelevant records, structural errors, outliers and three detection rules, the five steps in code, messy strings, near duplicates and record linkage, the audit trail</td></tr>
+        <tr><td class="week">§4</td><td><strong>Missing data</strong><br>Where missingness comes from, MCAR / MAR / MNAR with simulated examples, three strategies, the imputation family, scoring imputations, what imputation costs, missingness as signal, the decision tree</td></tr>
+        <tr><td class="week">§5</td><td><strong>Panels and balance</strong><br>Balanced against unbalanced panels, nominal balance and real gaps, why panels go unbalanced, diagnosing in Stata and pandas, interpolation, a prefecture-level population case</td></tr>
+        <tr><td class="week">§6</td><td><strong>Transformation, tools and engineering</strong><br>Variable transformations and taming skew, unit uniformity, pandas against Stata commands, Polars and DuckDB for bigger tables, pandera and Great Expectations, dbt and feature stores, LLM-assisted cleaning, de-identification, drift monitoring</td></tr>
+        <tr><td class="week">§7</td><td><strong>Projects and wrap-up</strong><br>Project 1 requirements, the one-page proposal, the quality report template, the 30-item preparation checklist, toolbox, glossary, a reproducibility drill</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Learning objectives</h3>
+    <ul>
+      <li>State the grain of a table and the key that identifies a row, before writing a single join;</li>
+      <li>Choose a join type from the question, and detect the cardinality explosion that follows a careless one;</li>
+      <li>Run the five cleaning steps in order, and keep an audit trail that another analyst can replay;</li>
+      <li>Distinguish MCAR, MAR and MNAR, and justify deletion, imputation or modelling the missingness;</li>
+      <li>Balance and interpolate a panel without inventing observations that never existed;</li>
+      <li>Package preparation as a pipeline: typed, tested, versioned, and re-runnable from raw data to analysis table.</li>
+    </ul>
+
+    <h3>Online preview</h3>
+    <p class="note no-print">If the preview does not appear in your browser, use the download button above.</p>
+    <iframe class="pdf-frame no-print" src="files/CH03-data-preparation.pdf" title="Chapter 3 courseware"></iframe>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h5>Data Analytics in Marketing</h5>
+        <p style="margin:.3em 0;color:#c9d2dc">Shenzhen University · 2026</p>
+        <p style="margin:.3em 0;color:#c9d2dc">Analytics module of Course 0205360001</p>
+      </div>
+      <div>
+        <h5>Quick links</h5>
+        <ul>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="index.html#chapters">All six chapters</a></li>
+          <li><a href="lecture-02.html">Chapter 2 slides</a></li>
+          <li><a href="lecture-04.html">Chapter 4 slides</a></li>
+          <li><a href="code.html">Sample data and code</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>Dr. Xieer Dai (David)</li>
+          <li><a href="mailto:xieer.dai@szu.edu.cn">xieer.dai@szu.edu.cn</a></li>
+          <li>Office hours by appointment</li>
+          <li>Sifang Building South 207</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      Course home <a href="https://elysium4eva.github.io/dataanalytics/">elysium4eva.github.io/dataanalytics</a> ·
+      GitHub <a href="https://github.com/elysium4eva">@elysium4eva</a> ·
+      Lecture notes built with LaTeX Beamer (Shenzhen University theme)
+    </div>
+  </div>
+</footer>
+</body>
+</html>

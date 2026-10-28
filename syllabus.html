@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syllabus · Data Analytics in Marketing</title>
+<meta name="description" content="Syllabus for Data Analytics in Marketing (Shenzhen University, 2026): six sessions across Chapters 1-5 and 15, learning outcomes, assessment and rubric, readings, and the AI-use and data-ethics rules.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/szu-logo.jpg">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/img/szu-logo.jpg" alt="Shenzhen University emblem">
+      <span>Data Analytics in Marketing</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#info">Course Info</a>
+      <a href="index.html#schedule">Schedule</a>
+      <a href="index.html#chapters">Chapters</a>
+      <a href="code.html">Code &amp; Data</a>
+      <a href="index.html#assessment">Assessment</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a class="cta" href="lecture-01.html">Chapter 1</a>
+    </div>
+  </div>
+</nav>
+
+<main class="doc">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">Course home</a> › Syllabus</p>
+    <h1 class="doc-title">Syllabus</h1>
+    <p class="doc-sub">Data Analytics in Marketing · analytics module of International Marketing Strategy (0205360001) · Shenzhen University · 2026</p>
+
+    <div class="hero-actions no-print">
+      <a class="btn btn-primary" href="index.html#chapters">Six chapters</a>
+      <a class="btn btn-ghost" href="code.html">Sample data &amp; code</a>
+      <a class="btn btn-gold" href="https://elysium4eva.github.io/marketing/syllabus.html">Host course syllabus</a>
+    </div>
+
+    <div class="grid grid-2" style="margin-top:22px">
+      <div class="card"><div class="k">Contents</div><div class="v">
+        <a href="#s-aims">1. Aims and learning outcomes</a><br>
+        <a href="#s-structure">2. Structure and schedule</a><br>
+        <a href="#s-sessions">3. Session detail</a><br>
+        <a href="#s-assessment">4. Assessment and rubric</a><br>
+        <a href="#s-reading">5. Readings</a><br>
+        <a href="#s-policy">6. Policies: AI use, integrity, data ethics</a>
+      </div></div>
+      <div class="card"><div class="k">At a glance</div><div class="v">Six sessions · 2 credits within the host course · English · no prior programming assumed · Python throughout · assessment through the host course project, with analytics weighted at 20% of the project rubric</div></div>
+    </div>
+
+    <h2 id="s-aims">1. Aims and learning outcomes</h2>
+    <p>The module exists to make you a competent <em>consumer and producer</em> of analytics in a marketing setting.
+       By the end you should be able to:</p>
+    <ol>
+      <li><strong>Frame</strong> a marketing question as an analytics question: what is the unit of analysis, what would count as evidence, what decision does the answer change.</li>
+      <li><strong>Source</strong> data legally and sensibly, and defend the choice on coverage, granularity, reliability, cost and licence.</li>
+      <li><strong>Prepare</strong> data reproducibly: state the grain, join without exploding rows, treat missingness by mechanism, keep an audit trail.</li>
+      <li><strong>Describe</strong> and visualise without misleading: choose the chart from the question, show uncertainty, write captions that stand alone.</li>
+      <li><strong>Model</strong> with discipline: split first, establish a baseline, choose a metric that matches the cost structure, calibrate probabilities, check for leakage.</li>
+      <li><strong>Translate</strong> methods into marketing decisions: conjoint part-worths, choice probabilities, hedonic prices, response curves and budget allocation.</li>
+      <li><strong>Deliver</strong> honestly: a model card, a run log, a limitations section, and an explicit statement of what the analysis cannot support.</li>
+    </ol>
+
+    <h2 id="s-structure">2. Structure and schedule</h2>
+    <p>Six sessions. The chapter numbers are those of the <em>Big Data Analytics</em> course this material is adapted
+       from, so the sequence keeps its place in that larger syllabus — Chapters 1 to 5, then the marketing application
+       in Chapter 15.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Session</th><th>Chapter</th><th>Theme</th><th>Reading before class</th><th>In-class work</th></tr></thead>
+      <tbody>
+        <tr><td class="week">1</td><td class="lec">Ch. 1</td><td>Introduction: big data, DIKW, levels of analytics, the 2026 AI landscape</td><td>Chapter 1 slides, Parts 1–2</td><td>Framing exercise: turn a marketing question into an analytics plan</td></tr>
+        <tr><td class="week">2</td><td class="lec">Ch. 2</td><td>Data sourcing: measurement, sources, APIs, scraping, surveys, experiments</td><td>Chapter 2 slides, §§1–4</td><td>Pull one API, score two candidate sources</td></tr>
+        <tr><td class="week">3</td><td class="lec">Ch. 3</td><td>Data preparation: grain, joins, cleaning, missing data, panels, pipelines</td><td>Chapter 3 slides, §§1–4</td><td>Clean a messy table and write the audit log</td></tr>
+        <tr><td class="week">4</td><td class="lec">Ch. 4</td><td>Description and visualization: the descriptive trio, chart grammar, maps, honest graphs</td><td>Chapter 4 slides, §§1–4</td><td>Six figures from one data set; critique a published chart</td></tr>
+        <tr><td class="week">5</td><td class="lec">Ch. 5</td><td>Machine learning: splits, bias–variance, metrics, algorithm families, model cards</td><td>Chapter 5 slides, Parts 1–5; run <code>l5_01</code>–<code>l5_04</code></td><td>Build a baseline and an evaluation protocol for your project</td></tr>
+        <tr><td class="week">6</td><td class="lec">Ch. 15</td><td>Big data in marketing: conjoint, choice models, hedonic regression, response models</td><td>Chapter 15 slides, Parts 1–3</td><td>Design a conjoint study; allocate a budget from a response curve</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Each session assumes the one before it. Chapter 5 in particular reuses the data table you built in
+      Chapter 3 and the figures you built in Chapter 4 — do not skip the preparation work.</p>
+
+    <h2 id="s-sessions">3. Session detail</h2>
+    <div class="grid grid-2">
+      <div class="card"><h4>Session 1 · Chapter 1 — Introduction</h4>
+        <p>DIKW and the 5 V; data modalities and the pipeline; four levels of analytics, plus generative and agentic;
+           the 2026 AI landscape from transformers to agents and retrieval; where analytics goes wrong: quality, bias,
+           seven pitfalls. <em>Take-away:</em> a written analytics question with a named decision and a named metric.</p></div>
+      <div class="card"><h4>Session 2 · Chapter 2 — Data sourcing</h4>
+        <p>Levels of measurement and what each permits; classifying structured, semi-structured and unstructured data;
+           scoring sources; APIs and REST; scraping and its legal limits; documents and LLM extraction; surveys,
+           sampling, modes, nonresponse; experiments and A/B tests; governance and licences.
+           <em>Take-away:</em> a source inventory with licence and quality notes.</p></div>
+      <div class="card"><h4>Session 3 · Chapter 3 — Data preparation</h4>
+        <p>Grain and keys; append, merge and the four join types; cardinality explosions; cleaning in five steps;
+           MCAR, MAR and MNAR with simulated examples; imputation and what it costs; panels and balance;
+           transformations; pipelines with pandera, dbt and drift monitoring.
+           <em>Take-away:</em> an analysis table rebuilt from raw data by one command.</p></div>
+      <div class="card"><h4>Session 4 · Chapter 4 — Description and visualization</h4>
+        <p>Documentation and metadata from day one; centre, dispersion and shape with their robustness; correlation,
+           contingency and conditional distributions; Simpson's paradox and restricted range; the grammar of graphics;
+           dashboards, maps and Moran's I; the four families of misleading charts; accessibility.
+           <em>Take-away:</em> a figure set with self-contained captions.</p></div>
+      <div class="card"><h4>Session 5 · Chapter 5 — Machine learning</h4>
+        <p>Four paradigms; prediction against causation; three splits and cross-validation; the leakage checklist;
+           bias–variance; metrics, thresholds against business cost, calibration; linear and penalised models, k-NN,
+           SVM, trees and ensembles; PCA and clustering; networks and reinforcement learning; model cards, MLOps,
+           cost and latency. <em>Take-away:</em> a baseline plus an evaluation protocol you can defend.</p></div>
+      <div class="card"><h4>Session 6 · Chapter 15 — Big data in marketing</h4>
+        <p>Survey design and its error budget; conjoint types, attributes, levels and part-worths; random utility,
+           logit, the IIA problem and the models that relax it; hedonic regression and quality-adjusted prices;
+           response curves, elasticity and budget allocation; reading vendor claims critically.
+           <em>Take-away:</em> a marketing analytics memo with one quantified recommendation.</p></div>
+    </div>
+
+    <h2 id="s-assessment">4. Assessment and rubric</h2>
+    <p>The module is assessed through the host course's project. Analytics enters <strong>20%</strong> of the project
+       rubric, under “Data analytics and visualization”, and shapes the evidence standard for the rest.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Component</th><th>Weight</th><th>What is judged</th></tr></thead>
+      <tbody>
+        <tr><td class="week">Participation and in-class work</td><td class="lec">10%</td><td>Preparation, discussion, exercises, responsible tool use</td></tr>
+        <tr><td class="week">Project oral presentation</td><td class="lec">30%</td><td>Question, data, preliminary evidence, method, feasibility</td></tr>
+        <tr><td class="week">Final essay and evidence package</td><td class="lec">60%</td><td>Integrated analysis, figures, reproducibility, reflection</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>The analytics rubric</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Criterion</th><th>Weight in the analytics component</th><th>What earns full marks</th></tr></thead>
+      <tbody>
+        <tr><td class="week">Question and decision</td><td class="lec">15%</td><td>The question is testable, the decision it informs is named, the metric follows from the cost of being wrong</td></tr>
+        <tr><td class="week">Data sourcing and preparation</td><td class="lec">25%</td><td>Licence stated; grain stated; joins validated; missingness treated by mechanism; an audit trail exists</td></tr>
+        <tr><td class="week">Analysis and interpretation</td><td class="lec">25%</td><td>Split before modelling; a baseline; the right metric; calibration where decisions depend on probability; no leakage</td></tr>
+        <tr><td class="week">Code and reproducibility</td><td class="lec">20%</td><td>One command rebuilds everything; seeds fixed; outputs on disk; a run log per program</td></tr>
+        <tr><td class="week">Communication</td><td class="lec">15%</td><td>Figures stand alone; captions carry the finding; limitations stated in the language of the decision</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Submission requirements</h3>
+    <ol>
+      <li>One PDF essay (≤ 4,000 words excluding appendix) plus an evidence package: code, data or a data-access statement, figures at full resolution, and run logs.</li>
+      <li>A <strong>model card</strong> for any model you fit: purpose, data, metrics, limitations, ethical considerations.</li>
+      <li>A <strong>leakage statement</strong>: which split you used, and why no information from the future or the target could enter the features.</li>
+      <li>An <strong>AI-use appendix</strong> (see §6).</li>
+      <li>Figures submitted as files, not pasted screenshots; every figure reproducible from the code you submit.</li>
+    </ol>
+
+    <h2 id="s-reading">5. Readings</h2>
+    <div class="grid grid-3">
+      <div class="card"><h4>Required</h4><p>Géron, A. (2022). <em>Hands-On Machine Learning with Scikit-Learn, Keras &amp; TensorFlow</em>, 3rd ed., Ch. 1–3. The lecture notes on this site, which are self-contained.</p></div>
+      <div class="card"><h4>Methods</h4><p>Hastie, Tibshirani &amp; Friedman, <em>The Elements of Statistical Learning</em>, Ch. 7. James et al., <em>An Introduction to Statistical Learning</em>. Mitchell, T. (1997), <em>Machine Learning</em>.</p></div>
+      <div class="card"><h4>Marketing analytics</h4><p>Palmatier &amp; Sridhar, <em>Marketing Strategy: Based on First Principles and Data Analytics</em>. Lilien &amp; Rangaswamy, <em>Marketing Engineering</em>, for conjoint and choice modelling.</p></div>
+      <div class="card"><h4>Econometrics meets ML</h4><p>Athey, S. (2017), “Beyond prediction”, <em>Science</em>. Mullainathan &amp; Spiess (2017), “Machine learning: an applied econometric approach”, <em>JEP</em>.</p></div>
+      <div class="card"><h4>Documentation and ethics</h4><p>Mitchell et al. (2019), <em>Model Cards for Model Reporting</em>. The EU AI Act high-risk list. Chinese AIGC labelling rules (2025).</p></div>
+      <div class="card"><h4>Tooling</h4><p>scikit-learn user guide and estimator map; XGBoost and LightGBM documentation; Optuna; MLflow; the pandas and Polars user guides.</p></div>
+    </div>
+
+    <h2 id="s-policy">6. Policies</h2>
+    <h3>AI use</h3>
+    <p>AI tools are allowed and expected — for code drafting, debugging, translation, and as a reading aid. They are not a
+       substitute for verification. Every submission carries an appendix listing:</p>
+    <ul>
+      <li>the tool and model used, and the date;</li>
+      <li>the purpose and the prompts or workflow;</li>
+      <li>the inputs you supplied and the outputs you used;</li>
+      <li>how you verified each output (ran it, checked a source, recomputed by hand);</li>
+      <li>what you corrected, and what you decided yourself.</li>
+    </ul>
+    <p><strong>Unverified AI output counts as academic misconduct</strong>, in the same category as a fabricated
+       citation. A number you cannot reproduce is a number you cannot submit.</p>
+
+    <h3>Data ethics and privacy</h3>
+    <ul>
+      <li>No personal data in any submission without consent and anonymisation; use aggregate or synthetic data where the question allows.</li>
+      <li>Respect terms of service and robots restrictions when collecting data; state the licence of every data set.</li>
+      <li>Do not scrape, store or redistribute material you have no right to use, even for a class exercise.</li>
+      <li>Report the limitations of your data as prominently as its findings.</li>
+    </ul>
+
+    <h3>Late work and resubmission</h3>
+    <p>Late submissions lose 10% of the component per day, to a floor of 50%, unless an extension is agreed before the
+       deadline. A failed analytics component may be resubmitted once within two weeks, with a written account of what
+       changed.</p>
+
+    <h3>Communication</h3>
+    <p>Email <a href="mailto:xieer.dai@szu.edu.cn">xieer.dai@szu.edu.cn</a>; office hours by appointment. Questions about
+       code should include the program name and the exact error message.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h5>Data Analytics in Marketing</h5>
+        <p style="margin:.3em 0;color:#c9d2dc">Shenzhen University · 2026</p>
+        <p style="margin:.3em 0;color:#c9d2dc">Analytics module of Course 0205360001</p>
+      </div>
+      <div>
+        <h5>Quick links</h5>
+        <ul>
+          <li><a href="index.html#chapters">All six chapters</a></li>
+          <li><a href="index.html#schedule">Six-session schedule</a></li>
+          <li><a href="code.html">Sample data and code</a></li>
+          <li><a href="https://elysium4eva.github.io/marketing/">Host course home</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>Dr. Xieer Dai (David)</li>
+          <li><a href="mailto:xieer.dai@szu.edu.cn">xieer.dai@szu.edu.cn</a></li>
+          <li>Office hours by appointment</li>
+          <li>Sifang Building South 207</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      Course home <a href="https://elysium4eva.github.io/dataanalytics/">elysium4eva.github.io/dataanalytics</a> ·
+      GitHub <a href="https://github.com/elysium4eva">@elysium4eva</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

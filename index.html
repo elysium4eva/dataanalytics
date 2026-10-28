@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Analytics in Marketing · Course Home</title>
+<meta name="description" content="Shenzhen University English course home for Data Analytics in Marketing: six chapters on data sourcing, preparation, description and visualization, machine learning and marketing applications, with English lecture notes, sample data and runnable code.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/szu-logo.jpg">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/img/szu-logo.jpg" alt="Shenzhen University emblem">
+      <span>Data Analytics in Marketing</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#info">Course Info</a>
+      <a href="index.html#schedule">Schedule</a>
+      <a href="index.html#chapters">Chapters</a>
+      <a href="code.html">Code &amp; Data</a>
+      <a href="index.html#assessment">Assessment</a>
+      <a href="index.html#materials">Materials</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a class="cta" href="lecture-01.html">Chapter 1</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner wrap">
+    <p class="eyebrow">Shenzhen University · Course 0205360001 · Data analytics module</p>
+    <h1>Data Analytics in Marketing</h1>
+    <h2>Course Home · 2026</h2>
+    <p class="lede">The analytics half of the international marketing course, taught as a self-contained
+       sequence: how data are <strong>acquired</strong>, <strong>prepared</strong>,
+       <strong>described and visualized</strong>, how <strong>machine learning</strong> turns them into
+       predictions that survive an evaluation protocol, and how those methods become
+       <strong>marketing decisions</strong> — conjoint design, choice models, hedonic pricing and
+       response curves. Six chapters, English lecture notes, runnable Python and real sample data.</p>
+    <ul class="chips">
+      <li><b>6</b> chapters</li>
+      <li><b>525</b> slide frames</li>
+      <li>Chapter 5: <b>104</b> frames · 12 programs</li>
+      <li>Python · scikit-learn · XGBoost</li>
+      <li>English</li>
+      <li>LaTeX Beamer (SZU theme)</li>
+    </ul>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="index.html#chapters">Six Chapters →</a>
+      <a class="btn btn-ghost" href="syllabus.html">Syllabus</a>
+      <a class="btn btn-ghost" href="code.html">Sample Data &amp; Code</a>
+      <a class="btn btn-gold" href="lecture-05.html">Chapter 5 · Machine Learning</a>
+    </div>
+  </div>
+</header>
+
+<section id="info">
+  <div class="wrap">
+    <div class="section-head">
+      <h3>Course Information</h3>
+      <p>This site is the analytics component of <em>International Marketing Strategy</em>. It carries the
+         data-analytics module in full and stands on its own for students who only take that part.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><div class="k">Course title</div><div class="v">Data Analytics in Marketing</div></div>
+      <div class="card"><div class="k">Host course · code</div><div class="v">International Marketing Strategy · 0205360001</div></div>
+      <div class="card"><div class="k">Instructor</div><div class="v">Dr. Xieer Dai (David)</div></div>
+      <div class="card"><div class="k">Email</div><div class="v">xieer.dai@szu.edu.cn</div></div>
+      <div class="card"><div class="k">Class time</div><div class="v">Weeks 7–14 · six sessions · Thursday 10:15–11:40</div></div>
+      <div class="card"><div class="k">Venue</div><div class="v">Sifang Building South 207</div></div>
+      <div class="card"><div class="k">Level and load</div><div class="v">Upper-year undergraduate and master's; 2 credits within the host course; no prior programming required</div></div>
+      <div class="card"><div class="k">Prerequisites</div><div class="v">Introductory statistics; spreadsheet literacy. Python is taught from the first session</div></div>
+      <div class="card"><div class="k">Software</div><div class="v">Python 3.11+, pandas, NumPy, matplotlib, scikit-learn, XGBoost / LightGBM, Jupyter</div></div>
+    </div>
+    <p class="note" style="margin-top:18px"><strong>What this sequence is for.</strong> Not to turn you into a
+      machine-learning engineer, but to make you the person in the room who can tell whether an analytics
+      result is trustworthy — and who can design the analysis that a marketing decision actually needs.</p>
+  </div>
+</section>
+
+<section id="schedule" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h3>Schedule · Six Sessions</h3>
+      <p>The chapter numbers follow the <em>Big Data Analytics</em> course this material is adapted from, so
+         the analytics sequence keeps its place in that larger syllabus: Chapters 1–5 then the marketing
+         application in Chapter 15.</p>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Session</th><th>Chapter</th><th>Theme</th><th>Methods you take away</th><th>Deliverable</th></tr></thead>
+      <tbody>
+        <tr><td class="week">1</td><td class="lec">Ch. 1</td><td>Introduction: from big data to generative and agentic AI</td><td>DIKW, the 5 V, levels of analytics, the ML 1-2-3 frame</td><td>Analytics question framing</td></tr>
+        <tr><td class="week">2</td><td class="lec">Ch. 2</td><td>Data sourcing</td><td>Data types and measurement, APIs, scraping, surveys, A/B tests, governance</td><td>Data-source memo with licence check</td></tr>
+        <tr><td class="week">3</td><td class="lec">Ch. 3</td><td>Data preparation</td><td>Joins and reshaping, cleaning, missing data, panels, reproducible pipelines</td><td>Cleaning log and data dictionary</td></tr>
+        <tr><td class="week">4</td><td class="lec">Ch. 4</td><td>Description and visualization</td><td>Univariate and multivariate description, chart grammar, dashboards, honest graphs</td><td>Exploratory figure set</td></tr>
+        <tr><td class="week">5</td><td class="lec">Ch. 5</td><td>Introduction to machine learning</td><td>Splits and cross-validation, bias–variance, metrics, calibration, algorithm families, model cards</td><td>Baseline model plus evaluation protocol</td></tr>
+        <tr><td class="week">6</td><td class="lec">Ch. 15</td><td>Big data in marketing</td><td>Survey design, conjoint and part-worths, choice models, hedonic regression, response curves</td><td>Marketing analytics case memo</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note" style="margin-top:16px">Sessions run inside the host course's analytics weeks. Chapter 5 assumes
+      Chapters 1–4: the evaluation protocol it builds is the one you reuse in every later assignment.</p>
+  </div>
+</section>
+
+<section id="chapters">
+  <div class="wrap">
+    <div class="section-head">
+      <h3>Chapters &amp; Lecture Notes</h3>
+      <p>Every chapter is a full Beamer deck in the Shenzhen University theme, translated and re-authored in
+         English for this course, with the same structure as the Chinese original. Slide counts are exact.</p>
+    </div>
+    <div class="lectures">
+
+      <div class="lecture is-live">
+        <div class="lecture-top"><span class="num">1</span><h4>Introduction: Big Data and the AI Landscape</h4></div>
+        <ul class="topics">
+          <li>DIKW, the 5 V and the four levels of analytics</li>
+          <li>The modern data stack; machine learning 1-2-3</li>
+          <li>AI 2022–2026: reasoning models, agents, retrieval, regulation</li>
+        </ul>
+        <div class="file-links">
+          <a href="lecture-01.html">Chapter page</a>
+          <a href="files/CH01-introduction.pdf">PDF (82 frames)</a>
+        </div>
+      </div>
+
+      <div class="lecture is-live">
+        <div class="lecture-top"><span class="num">2</span><h4>Data Sourcing: Foundations of Data Science</h4></div>
+        <ul class="topics">
+          <li>Types, structures and levels of measurement</li>
+          <li>Internal, open and third-party sources; APIs and scraping</li>
+          <li>Surveys, interviews, experiments; quality control and governance</li>
+        </ul>
+        <div class="file-links">
+          <a href="lecture-02.html">Chapter page</a>
+          <a href="files/CH02-data-sourcing.pdf">PDF (95 frames)</a>
+        </div>
+      </div>
+
+      <div class="lecture is-live">
+        <div class="lecture-top"><span class="num">3</span><h4>Data Preparation</h4></div>
+        <ul class="topics">
+          <li>Combining and reshaping; cleaning and outlier handling</li>
+          <li>Missing data: mechanisms, deletion, imputation</li>
+          <li>Panels and balance; reproducible pipelines</li>
+        </ul>
+        <div class="file-links">
+          <a href="lecture-03.html">Chapter page</a>
+          <a href="files/CH03-data-preparation.pdf">PDF (92 frames)</a>
+        </div>
+      </div>
+
+      <div class="lecture is-live">
+        <div class="lecture-top"><span class="num">4</span><h4>Data Description and Visualization</h4></div>
+        <ul class="topics">
+          <li>Documentation, metadata and univariate description</li>
+          <li>Bivariate and multivariate analysis; the grammar of graphics</li>
+          <li>Dashboards, geo-visualisation, misleading charts, accessibility</li>
+        </ul>
+        <div class="file-links">
+          <a href="lecture-04.html">Chapter page</a>
+          <a href="files/CH04-description-visualization.pdf">PDF (102 frames)</a>
+        </div>
+      </div>
+
+      <div class="lecture is-live">
+        <div class="lecture-top"><span class="num">5</span><h4>Introduction to Machine Learning</h4></div>
+        <ul class="topics">
+          <li>Four paradigms; splits, cross-validation, leakage checklist</li>
+          <li>Bias–variance, metrics, thresholds, calibration</li>
+          <li>Regression, k-NN, SVM, trees and ensembles; PCA and clustering</li>
+          <li>Networks, reinforcement learning, model cards and MLOps</li>
+        </ul>
+        <div class="file-links">
+          <a href="lecture-05.html">Chapter page</a>
+          <a href="files/CH05-machine-learning.pdf">PDF (104 frames)</a>
+          <a href="code.html">12 programs</a>
+        </div>
+      </div>
+
+      <div class="lecture is-live">
+        <div class="lecture-top"><span class="num">15</span><h4>Big Data in Marketing</h4></div>
+        <ul class="topics">
+          <li>Survey design; conjoint analysis and part-worths</li>
+          <li>Choice models: logit, IIA, nested and mixed logit</li>
+          <li>Hedonic regression and marketing response models</li>
+        </ul>
+        <div class="file-links">
+          <a href="lecture-06.html">Chapter page</a>
+          <a href="files/CH15-big-data-marketing.pdf">PDF (50 frames)</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="note" style="margin-top:18px">Chapter numbering follows the source course, where this sequence
+      sits in Chapters 1–5 and the marketing application in Chapter 15. The English decks keep the original
+      frame counts, sections and figures; only the language and the course framing change.</p>
+  </div>
+</section>
+
+<section id="assessment" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h3>Assessment Within the Host Course</h3>
+      <p>The analytics module is assessed through the host course's project. Full detail, the eight project
+         requirements and the complete rubric are in the <a href="syllabus.html#s-assessment">syllabus</a>.</p>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Component</th><th>Weight</th><th>How analytics enters it</th></tr></thead>
+      <tbody>
+        <tr><td class="week">Participation and in-class work</td><td class="lec">10%</td><td>Exercises on the sample data; code review in class</td></tr>
+        <tr><td class="week">Project oral presentation</td><td class="lec">30%</td><td>Analytics question, data source and preliminary evidence</td></tr>
+        <tr><td class="week">Final essay and evidence package</td><td class="lec">60%</td><td><strong>20% of the project rubric</strong> is “Data analytics and visualization”: sourcing, cleaning, analysis, figures, reproducibility</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid grid-2" style="margin-top:18px">
+      <div class="card">
+        <h4>What a good analytics submission shows</h4>
+        <p>A question that can be tested, data whose licence you can state, a split that blocks leakage, a
+           baseline you beat (or honestly fail to beat), calibrated probabilities where decisions depend on
+           them, and figures that survive being read without the text.</p>
+      </div>
+      <div class="card">
+        <h4>AI use disclosure</h4>
+        <p>Every submission carries an AI-use appendix: tool and model, prompts or workflow, inputs, the
+           outputs you used, how you verified them, what you corrected, and which decisions were yours.
+           Unverified AI output counts as academic misconduct.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="materials">
+  <div class="wrap">
+    <div class="section-head">
+      <h3>Materials</h3>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h4>Core reading</h4><p>Géron, A. (2022). <em>Hands-On Machine Learning with Scikit-Learn, Keras &amp; TensorFlow</em>, 3rd ed., Ch. 1–3. Plus the lecture notes on this site, which are self-contained.</p></div>
+      <div class="card"><h4>Methods references</h4><p>Hastie, Tibshirani &amp; Friedman, <em>The Elements of Statistical Learning</em>, Ch. 7; James et al., <em>An Introduction to Statistical Learning</em>; Mitchell, <em>Machine Learning</em> (1997) for the E/T/P definition.</p></div>
+      <div class="card"><h4>Marketing analytics</h4><p>Palmatier &amp; Sridhar, <em>Marketing Strategy: Based on First Principles and Data Analytics</em>; Lilien &amp; Rangaswamy, <em>Marketing Engineering</em> for conjoint and choice models.</p></div>
+      <div class="card"><h4>Tooling</h4><p>scikit-learn user guide and estimator map; XGBoost and LightGBM documentation; Optuna; MLflow. All open source and free.</p></div>
+      <div class="card"><h4>Ethics and compliance</h4><p>Model Cards (Mitchell et al., 2019); the EU AI Act high-risk list; the university's rules on personal data and informed consent.</p></div>
+      <div class="card"><h4>Data</h4><p>Every chapter ships sample data built for teaching, so results reproduce exactly: fixed seeds, fixed splits, one command to rebuild all figures.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h5>Data Analytics in Marketing</h5>
+        <p style="margin:.3em 0;color:#c9d2dc">Shenzhen University · 2026</p>
+        <p style="margin:.3em 0;color:#c9d2dc">Analytics module of Course 0205360001</p>
+      </div>
+      <div>
+        <h5>Quick links</h5>
+        <ul>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="index.html#schedule">Six-session schedule</a></li>
+          <li><a href="index.html#chapters">All six chapters</a></li>
+          <li><a href="code.html">Sample data and code</a></li>
+          <li><a href="files/CH05-machine-learning.pdf">Chapter 5 (PDF)</a></li>
+          <li><a href="https://elysium4eva.github.io/marketing/">Host course home</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>Dr. Xieer Dai (David)</li>
+          <li><a href="mailto:xieer.dai@szu.edu.cn">xieer.dai@szu.edu.cn</a></li>
+          <li>Office hours by appointment</li>
+          <li>Sifang Building South 207</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      Course home <a href="https://elysium4eva.github.io/dataanalytics/">elysium4eva.github.io/dataanalytics</a> ·
+      GitHub <a href="https://github.com/elysium4eva">@elysium4eva</a> ·
+      Lecture notes built with LaTeX Beamer (Shenzhen University theme)
+    </div>
+  </div>
+</footer>
+</body>
+</html>

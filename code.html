@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample Data &amp; Code · Data Analytics in Marketing</title>
+<meta name="description" content="Runnable Python for Data Analytics in Marketing: twelve programs and their sample data for Chapter 5 — pipelines, leakage, learning curves, metrics, regularisation, kNN/SVM, ensembles, PCA, clustering, a NumPy network and Q-learning.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/szu-logo.jpg">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/img/szu-logo.jpg" alt="Shenzhen University emblem">
+      <span>Data Analytics in Marketing</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#info">Course Info</a>
+      <a href="index.html#schedule">Schedule</a>
+      <a href="index.html#chapters">Chapters</a>
+      <a href="code.html">Code &amp; Data</a>
+      <a href="index.html#assessment">Assessment</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a class="cta" href="lecture-05.html">Chapter 5</a>
+    </div>
+  </div>
+</nav>
+
+<main class="doc">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">Course home</a> › Sample data &amp; code</p>
+    <h1 class="doc-title">Sample Data &amp; Code</h1>
+    <p class="doc-sub">Chapter 5 ships twelve programs, their sample data and their outputs. Every line carries a comment; one command rebuilds all tables and figures.</p>
+
+    <div class="grid grid-4" style="margin-top:22px">
+      <div class="card"><div class="k">Programs</div><div class="v"><strong>12</strong> Python scripts</div></div>
+      <div class="card"><div class="k">Sample data</div><div class="v">23 CSV files, fixed seeds</div></div>
+      <div class="card"><div class="k">Runtime</div><div class="v">Comfortably under a minute on a laptop</div></div>
+      <div class="card"><div class="k">Licence</div><div class="v">Teaching use; data are synthetic or public</div></div>
+    </div>
+
+    <h3>How to run it</h3>
+<pre><code># 1. get the folder (link below), then
+pip install -r requirements.txt
+
+# 2. rebuild every table, figure and run log
+python run_all.py
+
+# 3. or run one program on its own, e.g.
+python l5_02_cv_and_leakage.py</code></pre>
+    <p class="note">Each program writes a <code>l5_run_log_*.json</code> next to its outputs: script name, random seed,
+      data digest, metrics and artefact list. That record is what makes a result reproducible — and it is what the
+      model card in Chapter 5 is built from.</p>
+
+    <h3>The twelve programs</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Program</th><th>What it demonstrates</th><th>Output you should get</th></tr></thead>
+      <tbody>
+        <tr><td class="lec"><a href="code/chapter05/l5_01_pipeline_baseline.py">l5_01_pipeline_baseline.py</a></td><td>Stratified 60/20/20 split, a preprocessing pipeline, and a majority-class baseline against logistic regression</td><td>Baseline 73.3% accuracy at AUC 0.500; logistic regression at AUC 0.840</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_02_cv_and_leakage.py">l5_02_cv_and_leakage.py</a></td><td>Cross-validation and four protocols: honest pipeline, selection before splitting, target leakage, duplicate rows</td><td>0.824 / 0.825 / 1.000 / 0.828; honest hold-out 0.865</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_03_overfitting_curves.py">l5_03_overfitting_curves.py</a></td><td>Polynomial complexity sweep from degree 1 to 12, and learning curves at three complexities</td><td>Test error bottoms at degree 2; the three diagnosis panels</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_04_metrics_thresholds.py">l5_04_metrics_thresholds.py</a></td><td>ROC and PR curves, a threshold grid under asymmetric cost, and isotonic calibration</td><td>Test AUC 0.857, average precision 0.704, optimal threshold 0.26</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_05_regularized_regression.py">l5_05_regularized_regression.py</a></td><td>OLS, Ridge, Lasso and Elastic Net on a 164-column cubic expansion, with coefficient paths</td><td>Path plot and the shrinkage-against-sparsity comparison</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_06_knn_svm_tuning.py">l5_06_knn_svm_tuning.py</a></td><td>k-NN and SVM on two moons: k grid, RBF against linear kernel, decision boundaries</td><td>k = 15 wins; CV 0.921 against test 0.911</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_07_trees_ensembles.py">l5_07_trees_ensembles.py</a></td><td>Single tree, random forest, GBDT, XGBoost and LightGBM with timings and permutation importance</td><td>0.790 for one tree against 0.809–0.831 for ensembles</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_08_pca_factors.py">l5_08_pca_factors.py</a></td><td>PCA on a macro panel built from three latent factors: scree, loadings, reconstruction error</td><td>50.9 / 18.2 / 15.9 per cent on the first three components</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_09_clustering.py">l5_09_clustering.py</a></td><td>k-means, Ward and DBSCAN on 830 customers, with silhouette, Calinski–Harabasz and ARI</td><td>k-means and Ward recover 4 groups (ARI 1.00 / 0.99); DBSCAN 0.50</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_10_mlp_numpy.py">l5_10_mlp_numpy.py</a></td><td>A two-layer network written out in NumPy: forward pass, softmax, cross-entropy gradient, ReLU derivative</td><td>Test accuracy 0.929 against scikit-learn's 0.933</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_11_rl_gridworld.py">l5_11_rl_gridworld.py</a></td><td>Q-learning in a 6×6 grid with obstacles: ε-greedy exploration, TD updates, value heat map</td><td>Optimal path in 11 steps; last 20 episodes mean return 5.20</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/l5_12_interpretability_modelcard.py">l5_12_interpretability_modelcard.py</a></td><td>Permutation importance, PDP, ICE, a two-way interaction, and an auto-generated model card plus run log</td><td>The four interpretation panels and <code>artifacts/model_card_l5_credit.md</code></td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Sample data</h3>
+    <p>All samples are synthetic or drawn from open teaching sets, and all are versioned with the code by a fixed seed
+      (20260506). The main files:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>File</th><th>Rows</th><th>Used for</th></tr></thead>
+      <tbody>
+        <tr><td class="lec"><a href="code/chapter05/data/l5_credit_default.csv">l5_credit_default.csv</a></td><td>3,000</td><td>Classification: defaults at a 26.7% positive rate; the running example through Chapters 5 and 15</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/data/l5_housing.csv">l5_housing.csv</a></td><td>1,200</td><td>Regression: 7 raw features, expanded to 164 columns for the regularisation chapter</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/data/l5_two_moons.csv">l5_two_moons.csv</a></td><td>600</td><td>Non-linear boundaries: k-NN, SVM and the hand-written network</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/data/l5_customers_behavior.csv">l5_customers_behavior.csv</a></td><td>830</td><td>Clustering with 30 planted outliers</td></tr>
+        <tr><td class="lec"><a href="code/chapter05/data/l5_macro_panel.csv">l5_macro_panel.csv</a></td><td>240 months</td><td>PCA and factor analysis on 8 series generated from 3 latent factors</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Download the bundle</h3>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="code/chapter05/run_all.py">run_all.py</a>
+      <a class="btn btn-ghost" href="code/chapter05/requirements.txt">requirements.txt</a>
+      <a class="btn btn-ghost" href="code/chapter05/_common_l5.py">_common_l5.py (shared helpers)</a>
+      <a class="btn btn-gold" href="lecture-05.html">Chapter 5 slides</a>
+    </div>
+    <p class="note">Chapters 1–4 do not need a code bundle to be followed: their worked examples are built into the
+      slides, and every sample used there is generated by the deck's own listing. If you want the raw files for those
+      chapters, ask in class and they will be posted with the assignment.</p>
+
+    <h3>Conventions</h3>
+    <ul>
+      <li><strong>One comment per line.</strong> The programs are written to be read aloud in class, not only run.</li>
+      <li><strong>Seeds everywhere.</strong> <code>random_state=42</code> for splits and models, seed 20260506 for the sample generator.</li>
+      <li><strong>No hidden state.</strong> Each script starts from the CSV files, never from another script's output.</li>
+      <li><strong>Outputs on disk.</strong> Tables go to <code>data/</code>, figures to <code>figures/</code>, run logs and model cards to <code>artifacts/</code>.</li>
+      <li><strong>Fail loudly.</strong> Missing columns or changed dtypes raise instead of silently producing an empty chart.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h5>Data Analytics in Marketing</h5>
+        <p style="margin:.3em 0;color:#c9d2dc">Shenzhen University · 2026</p>
+        <p style="margin:.3em 0;color:#c9d2dc">Analytics module of Course 0205360001</p>
+      </div>
+      <div>
+        <h5>Quick links</h5>
+        <ul>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="index.html#chapters">All six chapters</a></li>
+          <li><a href="lecture-05.html">Chapter 5 slides</a></li>
+          <li><a href="lecture-06.html">Chapter 15 slides</a></li>
+          <li><a href="https://elysium4eva.github.io/marketing/">Host course home</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>Dr. Xieer Dai (David)</li>
+          <li><a href="mailto:xieer.dai@szu.edu.cn">xieer.dai@szu.edu.cn</a></li>
+          <li>Office hours by appointment</li>
+          <li>Sifang Building South 207</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      Course home <a href="https://elysium4eva.github.io/dataanalytics/">elysium4eva.github.io/dataanalytics</a> ·
+      GitHub <a href="https://github.com/elysium4eva">@elysium4eva</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
